@@ -3,9 +3,15 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         e1: './src/e1',
+        vendor: ['negative-zero'],
     },
     output: {
         path: path.resolve('dist'),
         filename: '[name].[hash].js',
     },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+        }),
+    ],
 };
