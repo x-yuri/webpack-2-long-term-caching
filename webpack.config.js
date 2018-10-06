@@ -24,4 +24,7 @@ module.exports = {
         }),
         new webpack.NamedModulesPlugin,
     ],
+    externals: {
+        jquery: 'jQuery',
+    },
 };
