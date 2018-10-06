@@ -10,14 +10,6 @@ module.exports = x => Object.is(x, -0);
 
 /***/ }),
 
-/***/ "./src/m1.js":
-/***/ (function(module, exports) {
-
-console.log('m1.js');
-
-
-/***/ }),
-
 /***/ "multi negative-zero":
 /***/ (function(module, exports, __webpack_require__) {
 

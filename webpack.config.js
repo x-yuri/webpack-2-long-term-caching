@@ -3,7 +3,6 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         e1: './src/e1',
-        e2: './src/e2',
         vendor: ['negative-zero'],
     },
     output: {
@@ -13,6 +12,7 @@ module.exports = {
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
+            minChunks: Infinity,
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'runtime',
