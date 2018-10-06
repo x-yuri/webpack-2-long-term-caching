@@ -17,5 +17,6 @@ module.exports = {
             name: 'runtime',
         }),
         new webpack.NamedChunksPlugin,
+        new webpack.NamedModulesPlugin,
     ],
 };
