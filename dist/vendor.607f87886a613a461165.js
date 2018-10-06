@@ -10,7 +10,7 @@ module.exports = x => Object.is(x, -0);
 
 /***/ }),
 
-/***/ 1:
+/***/ "multi negative-zero":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./node_modules/negative-zero/index.js");
@@ -18,4 +18,4 @@ module.exports = __webpack_require__("./node_modules/negative-zero/index.js");
 
 /***/ })
 
-},[1]);
+},["multi negative-zero"]);
