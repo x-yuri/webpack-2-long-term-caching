@@ -21,14 +21,6 @@ console.log('e1');
 
 /***/ }),
 
-/***/ "./src/m1.js":
-/***/ (function(module, exports) {
-
-console.log('m1.js');
-
-
-/***/ }),
-
 /***/ "external \"jQuery\"":
 /***/ (function(module, exports) {
 
