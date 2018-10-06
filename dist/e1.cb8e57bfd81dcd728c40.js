@@ -12,6 +12,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 __webpack_require__.e/* import() */("am1.js").then(__webpack_require__.bind(null, "./src/am1.js")).then(a => console.log(a));
+__webpack_require__.e/* import() */("am2.js").then(__webpack_require__.bind(null, "./src/am2.js")).then(a => console.log(a));
 console.log('e1');
 
 
