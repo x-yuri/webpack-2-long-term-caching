@@ -3,6 +3,7 @@ const webpack = require('webpack');
 module.exports = {
     entry: {
         e1: './src/e1',
+        e2: './src/e2',
         vendor: ['negative-zero'],
     },
     output: {
