@@ -1,37 +1,30 @@
-### Add vendor chunk
+### Switch to chunk hashes
 
 ```diff
 diff --git a/webpack.config.js b/webpack.config.js
-index c70ae81..39a77d0 100644
+index 39a77d0..13dafea 100644
 --- a/webpack.config.js
 +++ b/webpack.config.js
-@@ -3,9 +3,15 @@ const webpack = require('webpack');
- module.exports = {
-     entry: {
-         e1: './src/e1',
-+        vendor: ['negative-zero'],
+@@ -7,7 +7,7 @@ module.exports = {
      },
      output: {
          path: path.resolve('dist'),
-         filename: '[name].[hash].js',
+-        filename: '[name].[hash].js',
++        filename: '[name].[chunkhash].js',
      },
-+    plugins: [
-+        new webpack.optimize.CommonsChunkPlugin({
-+            name: 'vendor',
-+        }),
-+    ],
- };
+     plugins: [
+         new webpack.optimize.CommonsChunkPlugin({
 ```
 
     $ rm -rf dist; node_modules/.bin/webpack
-    Hash: fdc38091bf508a16f6ed
+    Hash: d336248193a28d983e41
     Version: webpack 2.7.0
-    Time: 61ms
+    Time: 66ms
                              Asset       Size  Chunks             Chunk Names
-        e1.fdc38091bf508a16f6ed.js  455 bytes       0  [emitted]  e1
-    vendor.fdc38091bf508a16f6ed.js    6.36 kB       1  [emitted]  vendor
+        e1.1f965e96896cca677617.js  455 bytes       0  [emitted]  e1
+    vendor.1e11f0c1ebfa5e58688d.js    6.38 kB       1  [emitted]  vendor
        [0] ./~/negative-zero/index.js 54 bytes {1} [built]
        [1] ./src/e1.js 42 bytes {0} [built]
        [2] multi negative-zero 28 bytes {1} [built]
 
-Add `vendor` chunk to not force user to download all the libraries every time site's code changes.
+Switch to chunk hashes for changes in chunk `e1` to not invalidate `vendor` chunk.

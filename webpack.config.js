@@ -7,7 +7,7 @@ module.exports = {
     },
     output: {
         path: path.resolve('dist'),
-        filename: '[name].[hash].js',
+        filename: '[name].[chunkhash].js',
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
